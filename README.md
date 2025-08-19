@@ -36,11 +36,21 @@ Estas instrucciones te permitirán obtener una copia del proyecto y ejecutarlo e
 * Para ver la página principal:
 http://localhost:35000/
 
+![Página principal](assets/img.png)
 
+* Al agregar una tarea, se muestran en la lista de tareas.
 
+![Tarea Enviada](assets/taskSended.png)
 
 * Para consultar las tareas (API):
 http://localhost:35000/api/tasks
+
+* Para mostrar los archivos estáticos:
+http://localhost:35000/<ruta_del_archivo>
+    (Muestra el contenido del archivo si existe).
+
+![Archivo estático](assets/exampleStaticFiles.png)
+
 
 ## Authors
 David Alfonso Barbosa Gómez
