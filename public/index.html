@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Tareas - Servidor HTTP en Java</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+    <h1>Gestor de Tareas</h1>
+    <p>Este sitio es servido por nuestro servidor HTTP en Java.</p>
+</header>
+
+<main>
+    <section>
+        <h2>📋 Lista de tareas</h2>
+        <button onclick="loadTasks()">Cargar tareas</button>
+        <div id="tasks"></div>
+    </section>
+
+    <section>
+        <h2>➕ Agregar nueva tarea</h2>
+        <form onsubmit="addTask(); return false;">
+            <label>Título:</label>
+            <input id="title" placeholder="Título de la tarea" required><br>
+
+            <label>Descripción:</label>
+            <input id="description" placeholder="Descripción breve" required><br>
+
+            <label>Estado:</label>
+            <select id="done">
+                <option value="false" selected>Pendiente</option>
+                <option value="true">Completada</option>
+            </select><br>
+
+            <button type="submit">Agregar</button>
+        </form>
+        <div id="postresp"></div>
+    </section>
+</main>
+
+<footer>
+    <p>Servidor web en Java puro - Ejemplo académico</p>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
