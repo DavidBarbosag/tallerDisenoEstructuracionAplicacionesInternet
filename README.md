@@ -31,6 +31,64 @@ Estas instrucciones te permitirán obtener una copia del proyecto y ejecutarlo e
 5. Accede mediante este url http://localhost:35000.
 
 
+## Estructura del proyecto
+
+```
+http-mini-server/
+├── assets/                          # Imágenes y recursos estáticos para la documentación
+│   ├── exampleStaticFiles.png
+│   ├── img.png
+│   └── taskSended.png
+│
+├── public/                          # Archivos estáticos servidos por el servidor
+│   ├── index.html
+│   ├── style.css
+│   ├── app.js
+│   └── img/
+│       └── test.jpg
+│
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── http/
+│   │           ├── SimpleHttpServer.java
+│   │           └── Task.java
+│   │
+│   └── test/
+│       └── java/
+│           └── http/
+│               └── AppTest.java
+│
+├── pom.xml                          # Archivo de configuración de Maven
+├── README.md                        # Documentación del proyecto
+└── target/                          # Archivos compilados y generados por Maven
+```
+
+## Arquitectura
+
+Arquitectura
+El servidor HTTP está construido en Java sin frameworks externos. Su arquitectura se compone de los siguientes módulos:
+
+
+* Servidor principal (SimpleHttpServer.java):
+
+   Gestiona las conexiones entrantes, sirve archivos estáticos desde la carpeta public/ y expone una API REST para la gestión de tareas.
+
+
+* Modelo de datos (Task.java):
+
+   Representa las tareas gestionadas por la API, permitiendo operaciones de consulta y creación.
+
+
+* Recursos estáticos:
+
+   Los archivos HTML, CSS, JS e imágenes se encuentran en la carpeta public/ y son servidos directamente por el servidor.
+
+  
+El flujo básico consiste en recibir una solicitud HTTP, identificar si es para un recurso estático o para la API,
+y responder en consecuencia. La comunicación entre módulos se realiza mediante clases Java simples, facilitando la extensión
+y el mantenimiento.
+
 ## Uso
 
 * Para ver la página principal:
